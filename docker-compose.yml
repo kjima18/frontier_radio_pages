@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    volumes:
+      - ./app:/usr/src/app
+      - node_modules_volume:/workspaces/node_modules
+      - yarn-cache:/usr/local/share/.cache/yarn/v6
+    command: sh -c 'cd app && yarn && yarn start'
+    ports:
+      - '3000:3000'
+    tty: true
+volumes:
+  node_modules_volume:
+  yarn-cache:
