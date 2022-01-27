@@ -12,6 +12,7 @@ module.exports = {
     "plugin:import/typescript",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "orettier",
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
